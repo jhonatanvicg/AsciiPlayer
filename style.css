@@ -1,0 +1,306 @@
+@import url('https://fonts.googleapis.com/css2?family=Nunito:wght@300;400;500;600;700;800&display=swap');
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    font-family: 'Nunito', sans-serif;
+}
+
+body{
+    background: #FBD3E9;  /* fallback for old browsers */
+    background: -webkit-linear-gradient(to right, #BB377D, #FBD3E9);  /* Chrome 10-25, Safari 5.1-6 */
+    background: linear-gradient(to right, #BB377D, #FBD3E9); /* W3C, IE 10+/ Edge, Firefox 16+, Chrome 26+, Opera 12+, Safari 7+ */
+    
+}
+
+.container{
+    width: 100%;
+    height: 100vh;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.container--left{
+    width: 40%;
+    height: 100%;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    justify-content: space-around;
+
+}
+
+.left--title{
+    width: 100%;
+    font-size: 20px;
+    font-weight: bold;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(8, 9, 58, 0.514);
+    padding: 10px 0;
+    color: white;
+}
+
+
+.left--video{
+    width: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    position: absolute;
+    margin-top: -5000px;
+}
+
+.left-instructions{
+    width: 95%;
+    height: 40%;
+    color: white;
+    text-align: center;
+    border-radius: 4px;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    background:rgba(19, 189, 152, 0.507) ;
+
+}
+
+.commands--container{
+    background:rgba(58, 56, 56, 0.555) ;
+    width: 100%;
+    height: 100%;
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+}
+
+.command--card{
+    width: 160px;
+    height: 150px;
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    border: 1px solid rgba(255, 255, 255, 0.281);
+    border-radius: 4px;
+    background: rgb(58, 56, 56);
+}
+
+
+
+.card--title{
+    height: 25px;
+    width: 100%;
+    background:rgba(19, 189, 152, 0.507);
+}
+
+.command--card li{
+    margin-top: 10px;
+    font-size: 12px;
+}
+
+
+.left--reproductor{
+    width: 100%;
+    height: 350px;
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    flex-flow: wrap;
+    align-items: center;
+    justify-content: space-around;
+    overflow-y: auto;
+}
+
+.reproductor--item{
+    cursor: pointer;
+    height: 60px;
+    width: 250px;
+    padding: 8px 15px;
+    margin-left: 5px;
+    border-radius: 4px;
+    margin-top: 5px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    background: rgba(8, 9, 58, 0.514);
+    transition: .3s;
+
+}
+
+.reproductor--item:hover{
+    background: rgba(4, 5, 48, 0.678);
+    transition: .3s;
+
+}
+
+
+.item--min{
+    width: 50px;
+    height: 50px;
+}
+
+.item--min img{
+    width: 100%;
+    height: 100%;
+    border-radius: 50%;
+}
+
+.item--title{
+    margin-left: 20px;
+    font-weight: bold;
+    color: white;
+}
+
+.container--right{
+    width: 60%;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+
+.videoPlayer{
+    background: white;
+    width: 500px;
+    height: 350px;
+}
+
+.canvasBoard{
+    background: rgb(58, 56, 56);
+    width: 700px;
+    height: 400px;
+}
+
+.console{
+    margin: 0px;
+    display: flex;
+    flex-direction: column;
+    background: rgba(19, 189, 152, 0.507);
+    
+}
+
+.console--top{
+    display: flex;
+    justify-content: space-between;
+}
+
+.console--logo{
+    width: 25px;
+    height: 100%;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.console--logo img{
+    width: 90%;
+    height: 90%;
+}
+
+
+.console--pwd{
+    font-size: 15px;
+    font-weight: 600;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-width: 300px;
+}
+
+
+
+.console--controls{
+    align-self: end;
+    height: 25px;
+    display: flex;
+}
+
+.console--input{
+    font-size: 15px;
+    background: rgb(58, 56, 56);
+    color: white;
+    display: flex;
+    align-items: center;
+}
+
+.console--input p{
+    margin:2px 3px 0 5px;
+}
+
+.console--input input{
+    width: 100%;
+    background: rgb(58, 56, 56);
+    border: none;
+    outline: none;
+    color: white;
+}
+
+.controls{
+    font-size: 12px;
+    width: 45px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    font-weight: 600;
+    cursor: pointer;
+    transition: .3s;
+}
+
+i:nth-child(1){
+    font-size: 16px;
+}
+
+.controls:nth-child(1):hover{
+    background: rgb(0, 89, 255);
+    color: white;
+    transition: .3s;
+}
+
+.controls:nth-child(2):hover{
+    background: rgb(0, 89, 255);
+    color: white;
+    transition: .3s;
+
+}
+
+
+
+
+.controls:nth-child(3){
+    background: rgb(221, 57, 57);
+    color: white;
+}
+
+
+
+
+@media(max-width:1159px){
+    .container{
+        margin: 50px 0;
+        height: auto;
+        flex-direction: column-reverse;
+    }
+
+    .container--left{
+        margin-top: 50px;
+        flex-direction: row;
+        width: 100%;
+    }
+
+    .left-instructions{
+        height: 350px;
+        width: 85%; 
+    }
+    
+    .left--reproductor{
+        width: 85%; 
+    }
+    .left--title{
+        padding: 15px 0;
+    }
+
+}
