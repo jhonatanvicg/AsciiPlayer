@@ -1,0 +1,117 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link href="https://fonts.googleapis.com/icon?family=Material+Icons" rel="stylesheet">
+    <link rel="stylesheet" href="style.css">
+</head>
+<body>
+    
+    <div class="container">
+
+        <div class="container--left">
+            <div class="left-instructions">
+                <h1>Commands</h1>
+                <div class="commands--container">
+                    <div class="command--card">
+                        <div class="card--title">
+                            <p>play</p>
+                        </div>
+                        <li>You can use this command if your video is paused.</li>
+                    </div>
+                    <div class="command--card">
+                        <div class="card--title">
+                            <p>pause</p>
+                        </div>
+                        <li>You can use this command if you want to pause a video.</li>
+                    </div>
+                    <div class="command--card">
+                        <div class="card--title">
+                            <p>play <i>first word of file</i></p>
+                        </div>
+                        <li>
+                            If you want to play an especific file just write the command <strong>"play"</strong> 
+                            followed by the first word of the file name.
+                            Example: play kaguya
+                        </li>
+                    </div>
+                </div>
+            </div>
+            <div class="left--reproductor">
+                <div class="left--title">
+                    Videos Availables
+                </div>
+                <div class="reproductor--item">
+                    <div class="item--min">
+                        <img src="./Assets/miniaturas/akira.jpg" alt="">
+                    </div>
+                    <div class="item--title">Akira</div>
+                </div>
+                <div class="reproductor--item">
+                    <div class="item--min">
+                        <img src="./Assets/miniaturas/Chika.jpg" alt="">
+                    </div>
+                    <div class="item--title">Kaguya Sama</div>
+                </div>
+                <div class="reproductor--item">
+                    <div class="item--min">
+                        <img src="./Assets/miniaturas/Zoro.jpg" alt="">
+                    </div>
+                    <div class="item--title">Roronoa Zoro</div>
+                </div>
+                <div class="reproductor--item">
+                    <div class="item--min">
+                        <img src="./Assets/miniaturas/Mirai.jpg" alt="">
+                    </div>
+                    <div class="item--title">Mirai Nikki</div>
+                </div>
+                <div class="reproductor--item">
+                    <div class="item--min">
+                        <img src="./Assets/miniaturas/levi.jpg" alt="">
+                    </div>
+                    <div class="item--title">Shingeki no Kyojin</div>
+                </div>
+            </div>
+
+        </div>
+        <div class="container--right">
+            <div class="console">
+                <div class="console--top">
+                    <div class="console--logo">
+                        <img src="./Assets/images/Logo.png" alt="">
+                    </div>
+                    <div class="console--pwd">
+                        C:/ASCII/Videos
+                    </div>
+                    <div class="console--controls">
+                        <div class="controls Minimize">
+                            <i class="large material-icons">remove</i>
+                        </div>
+                        <div class="controls Maximize">
+                            <i class="tiny material-icons">web_asset</i>
+                        </div>
+                        <div class="controls Close">X</div>
+                    </div>
+                </div>
+                <div class="console--input">
+                    <p>
+                        $
+                    </p>
+                    <input type="text" id="commands" focus>
+                </div>
+                <canvas class="canvasBoard">
+                </canvas>
+            </div>
+        </div>
+    </div>
+    <div class="left--video">
+        <video   class="videoPlayer"controls muted src="./Assets/Videos/kaguya.mp4"></video>
+    </div>
+    
+
+    <script src="./index.js"></script>
+</body>
+</html>
