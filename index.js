@@ -11,6 +11,8 @@ let maximizeButton = document.querySelector(".Maximize");
 let minimizeButton = document.querySelector(".Minimize");
 let maximized = false;
 
+
+
 class Cell{
     constructor(x,y,symbol, color){
         this.x = x;
@@ -141,18 +143,20 @@ video.addEventListener('loadedmetadata',()=>{
     canvas.height = video.videoHeight;
     canvas.width = video.videoWidth;
 })
+const drawImage = ()=>{
+    console.log("Dentro de draw image")
+    if(!video.pused){
+        let effect = new AsciiEffect(ctx, video.videoWidth,video.videoHeight);
+        effect.draw(9)
+        setTimeout(drawImage,1000/frameRate)
+    }
+}
 
 const frameRate = 10;
 video.addEventListener('play',()=>{
     
     //    ctx.drawImage(video,0,0);
-    const drawImage = ()=>{
-        if(!video.pused){
-            let effect = new AsciiEffect(ctx, video.videoWidth,video.videoHeight);
-            effect.draw(9)
-            setTimeout(drawImage,1000/frameRate)
-        }
-    }
+    
     setTimeout(drawImage,1000/frameRate)
 })
 
@@ -162,6 +166,13 @@ const setVideoSrc = (videoTitle)=>{
     video.src = currentVideoSrc;
     video.play()
     setTimeout(drawImage,1000/frameRate)
+
+}
+
+const setVideoFromUrl = (url)=>{
+    video.src = url;
+    video.play();
+    setTimeout(drawImage,10000)
 
 }
 
@@ -194,8 +205,14 @@ document.addEventListener("keyup", (event)=>{
 });
 
 
-maximizeButton.addEventListener('click',()=>{
-})
+function videoLoaded(){
+    let fileItem = document.querySelector(".input-url");
+    let files = fileItem.files;
+    let file = files[0];
+    let url = URL.createObjectURL(file);
+    setVideoFromUrl(url)
+
+}
 
 minimizeButton.addEventListener('click',()=>{
 })
